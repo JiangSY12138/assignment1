@@ -3,7 +3,7 @@
 > b <- 1/a #取倒数
 > res1 <- atan(b) #求正切
 > 
-> x <- 1:1000 #赋值
+> x <- as.numeric(a) #整数向量转换为数字向量
 > y <- atan(1/x) #求倒数正切
 > z <- 1/tan(y) #求切线倒数
 
@@ -100,7 +100,9 @@
  [969] FALSE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE
  [980] FALSE FALSE FALSE  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE
  [991]  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE  TRUE
-> all.equal(x,z)
+> identical(x,z) #用identical函数比较，不等
+[1] FALSE
+> all.equal(x,z) #用all.equal比较，相等
 [1] TRUE
-all.equal(x,z,tolerence = 0)
+all.equal(x,z,tolerence = 0) #tolerence=0也相等
 [1] TRUE
