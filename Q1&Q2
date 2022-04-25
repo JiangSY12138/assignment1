@@ -11,5 +11,4 @@ z <- 1/tan(y) #求切线倒数
 x == z #用 == 比较x,z
 identical(x,z) #用identical函数比较，不等
 > all.equal(x,z) #用all.equal比较，相等
-all.equal(x,z,tolerance = 0) #tolerance=0
-
+all.equal(x,z,tolerance = 0) #tolerance=0时结果[1] "Mean relative difference: 1.270335e-16"，意为最小的容忍度是1.270335e-16时两者相等
