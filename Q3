@@ -1,0 +1,9 @@
+#问题三
+#定义三个变量
+> true_and_missing <- c(TRUE , NA)
+> false_and_missing <- c(FALSE , NA)
+> mixed <- c(TRUE , FALSE , NA)
+> any(true_and_missing , false_and_missing , mixed) #应用any函数，任意两变量相同（都有NA）
+[1] TRUE
+> all(true_and_missing , false_and_missing , mixed) #应用all函数，所有变量相同（错的）
+[1] FALSE
